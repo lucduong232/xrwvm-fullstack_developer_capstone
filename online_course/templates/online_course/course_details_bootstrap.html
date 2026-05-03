@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <!-- Nhúng Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Task 4: Hiển thị tên khóa học -->
+        <h1 class="display-4 text-primary">{{ course.name }}</h1>
+        <p class="lead">{{ course.description }}</p>
+
+        <hr class="my-4">
+
+        <h3 class="mb-4">Lessons:</h3>
+        <div class="list-group">
+            <!-- Task 4: Sử dụng thẻ Django Template để lặp qua danh sách bài học -->
+            {% for lesson in course.lesson_set.all %}
+                <div class="list-group-item list-group-item-action shadow-sm mb-2 rounded">
+                    <h5 class="mb-1 text-dark">{{ lesson.title }}</h5>
+                    <p class="mb-1 text-muted">This is a lesson for the {{ course.name }} course.</p>
+                </div>
+            {% empty %}
+                <p class="alert alert-warning">No lessons available for this course.</p>
+            {% endfor %}
+        </div>
+        
+        <a href="#" class="btn btn-secondary mt-3">Back to Course List</a>
+    </div>
+
+    <!-- Nhúng Bootstrap JS và jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
