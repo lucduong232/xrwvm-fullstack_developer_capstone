@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Dealership App</title>
-    <!-- Nhúng Bootstrap CSS -->
+
+    <!-- REQUIRED CSS -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Optional Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
     <style>
         .contact-header { background: #002d72; color: white; padding: 40px 0; }
         .contact-info-icon { font-size: 2rem; color: #002d72; margin-bottom: 15px; }
@@ -14,16 +20,14 @@
         footer { background: #f8f9fa; padding: 20px 0; margin-top: 50px; }
     </style>
 </head>
+
 <body>
 
-    <!-- Thanh điều hướng (Navigation Bar) -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Best Cars</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/djangoapp/">Home</a>
@@ -31,65 +35,59 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/djangoapp/about">About Us</a>
                     </li>
-                    <!-- Quan trọng: Thuộc tính 'active' nằm ở đây -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/djangoapp/contact">Contact Us</a>
+                        <a class="nav-link active" href="/djangoapp/contact">Contact Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- HEADER -->
     <header class="contact-header text-center">
         <div class="container">
-            <h1 class="display-4">Contact Us</h1>
-            <p class="lead">We're here to help you find your dream car.</p>
+            <h1>Contact Us</h1>
+            <p>We're here to help you find your dream car.</p>
         </div>
     </header>
 
+    <!-- MAIN -->
     <main class="container mt-5">
+
+        <!-- REQUIRED IMAGE -->
+        <div class="text-center mb-4">
+            <img src="/static/contactus.png" class="img-fluid" alt="Contact Us">
+        </div>
+
         <div class="row text-center">
-            <!-- Thông tin Địa chỉ -->
-            <div class="col-md-4 mb-4">
-                <div class="card info-card p-4">
-                    <div class="contact-info-icon">📍</div>
-                    <h5>Our Showroom</h5>
-                    <p class="text-muted">123 Car Avenue, Suite 100<br>New York, NY 10001</p>
-                </div>
+
+            <div class="col-md-4">
+                <h5>Our Showroom</h5>
+                <p>123 Car Avenue, New York, NY</p>
             </div>
 
-            <!-- Thông tin Điện thoại -->
-            <div class="col-md-4 mb-4">
-                <div class="card info-card p-4">
-                    <div class="contact-info-icon">📞</div>
-                    <h5>Phone Number</h5>
-                    <p class="text-muted">General: +1 (212) 555-0198<br>Sales: +1 (212) 555-0199</p>
-                </div>
+            <div class="col-md-4">
+                <h5>Phone</h5>
+                <p>+1 212-555-0198</p>
             </div>
 
-            <!-- Thông tin Email -->
-            <div class="col-md-4 mb-4">
-                <div class="card info-card p-4">
-                    <div class="contact-info-icon">✉️</div>
-                    <h5>Email Support</h5>
-                    <p class="text-muted">support@bestcars.com<br>sales@bestcars.com</p>
-                </div>
+            <div class="col-md-4">
+                <h5>Email</h5>
+                <p>support@bestcars.com</p>
             </div>
+
         </div>
 
-        <!-- Hình ảnh thực tế (Mockup) -->
-        <div class="row mt-5">
-            <div class="col-12">
-                <img src="https://picsum.photos/seed/dealership/1200/400" class="img-fluid rounded shadow" alt="Our Dealership Location">
-            </div>
+        <!-- REQUIRED IMAGE -->
+        <div class="text-center mt-5">
+            <img src="/static/cars.jpeg" class="img-fluid" alt="Cars">
         </div>
+
     </main>
 
     <footer class="text-center">
-        <p class="text-muted">&copy; 2024 Best Cars Dealership. Contact us anytime!</p>
+        <p>&copy; 2024 Best Cars Dealership</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
